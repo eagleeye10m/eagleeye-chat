@@ -6,11 +6,10 @@ import {
 } from "@mui/icons-material";
 import Image from "next/image";
 import Link from "next/link";
-import { redirect, useRouter } from "next/navigation";
+import { useRouter } from "next/navigation";
 import { useForm } from "react-hook-form";
 import toast from "react-hot-toast";
 import { signIn } from "next-auth/react";
-import { useEffect } from "react";
 
 export default function Form({ type }) {
   const {

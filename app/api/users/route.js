@@ -1,7 +1,6 @@
 import { User } from "@/models/User";
 import { connectToDB } from "@/mongoDb";
 
-export const dynamic = "force-static";
 export const GET = async () => {
   try {
     await connectToDB();
