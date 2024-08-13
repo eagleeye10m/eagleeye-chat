@@ -1,6 +1,6 @@
 "use client";
 import Loader from "@/components/Loader";
-import { PersonOutline } from "@mui/icons-material";
+import PersonOutline from "@mui/icons-material/PersonOutline";
 import { useSession } from "next-auth/react";
 import { CldUploadButton } from "next-cloudinary";
 import { useEffect, useState } from "react";

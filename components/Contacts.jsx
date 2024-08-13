@@ -2,7 +2,8 @@
 
 import { useEffect, useState } from "react";
 import Loader from "./Loader";
-import { CheckCircle, RadioButtonUnchecked } from "@mui/icons-material";
+import CheckCircle from "@mui/icons-material/CheckCircle";
+import RadioButtonUnchecked from "@mui/icons-material/RadioButtonUnchecked";
 import { CldImage } from "next-cloudinary";
 import { useRouter } from "next/navigation";
 

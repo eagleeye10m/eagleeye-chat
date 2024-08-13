@@ -3,7 +3,7 @@ import { useEffect, useMemo, useRef, useState } from "react";
 import Loader from "./Loader";
 import Link from "next/link";
 import { CldImage, CldUploadButton } from "next-cloudinary";
-import { AddPhotoAlternate } from "@mui/icons-material";
+import AddPhotoAlternate from "@mui/icons-material/AddPhotoAlternate";
 import MessageBox from "./MessageBox";
 import { pusherClient } from "@/lib/pusher";
 

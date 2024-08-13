@@ -1,9 +1,9 @@
 "use client";
 import Loader from "@/components/Loader";
-import { GroupOutlined } from "@mui/icons-material";
+import GroupOutlined from "@mui/icons-material/GroupOutlined";
 
 import { CldUploadButton } from "next-cloudinary";
-import Image from "next/image";
+
 import { useParams } from "next/navigation";
 import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
