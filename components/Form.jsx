@@ -48,6 +48,7 @@ export default function Form({ type }) {
         <Image
           src="/assets/logo.bmp"
           alt="logo"
+          priority
           className="logo"
           width={200}
           height={200}

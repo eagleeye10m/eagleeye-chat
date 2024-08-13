@@ -1,5 +1,5 @@
 import { User } from "@/models/User";
-import { connectToDB } from "@/mongoDb";
+import { connectToDB } from "@/mongoDb/index";
 import { compare } from "bcryptjs";
 import NextAuth from "next-auth";
 import CredentialsProvider from "next-auth/providers/credentials";
