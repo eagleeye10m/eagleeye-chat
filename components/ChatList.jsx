@@ -4,12 +4,14 @@ import React, { useEffect, useState } from "react";
 import Loader from "./Loader";
 import ChatBox from "./ChatBox";
 import { pusherClient } from "@/lib/pusher";
+import { useSession } from "next-auth/react";
 
-export default function ChatList({ session, currentChatId }) {
+export default function ChatList({ currentChatId }) {
   const [loading, setLoading] = useState(true);
   const [chats, setChats] = useState([]);
   const [search, setSearch] = useState("");
 
+  const { data: session } = useSession();
   const currentUser = session?.user;
   console.log(session);
 

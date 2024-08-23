@@ -3,7 +3,7 @@
 import Contacts from "@/components/Contacts";
 
 export default async function ContactsPage() {
-  // const data = await getServerSession(authOptions);
+  // const data = await getServerSession(authOptions);   // getServerSession encounters some problems in vercel
   // const session = JSON.parse(JSON.stringify(data));
   return (
     <div className="px-10 py-6 mb-20 ">
