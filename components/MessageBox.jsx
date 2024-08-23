@@ -33,6 +33,7 @@ const MessageBox = ({ message, currentUser }) => {
             width={100}
             height={100}
             src={message?.photo}
+            alt="message photo"
             className="message-photo"
           />
         )}
@@ -41,7 +42,7 @@ const MessageBox = ({ message, currentUser }) => {
   ) : (
     <div className="message-box justify-end">
       <div className="message-info items-end">
-        <p className="text-small-bold">
+        <div className="text-small-bold">
           {format(new Date(message?.createdAt), "p")}
 
           {message?.text ? (
@@ -51,10 +52,11 @@ const MessageBox = ({ message, currentUser }) => {
               width={100}
               height={100}
               src={message?.photo}
+              alt="message photo"
               className="message-photo"
             />
           )}
-        </p>
+        </div>
       </div>
     </div>
   );

@@ -48,6 +48,7 @@ const ChatBox = ({ chat, currentUser, currentChatId }) => {
             width={100}
             height={100}
             className="profilePhoto"
+            alt="Profile photo"
           />
         ) : (
           <img

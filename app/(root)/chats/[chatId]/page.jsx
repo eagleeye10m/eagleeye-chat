@@ -12,6 +12,7 @@ const ChatPage = async ({ params }) => {
   const session = JSON.parse(JSON.stringify(data));
 
   const { chatId } = params;
+  console.log(session);
 
   const { _id } = data?.user;
   const currentUserId = _id.toString();

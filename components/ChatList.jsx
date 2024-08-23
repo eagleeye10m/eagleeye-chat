@@ -82,8 +82,8 @@ export default function ChatList({ currentChatId }) {
         {chats?.map((chat, index) => (
           <ChatBox
             chat={chat}
-            index={index}
             currentUser={currentUser}
+            key={index}
             currentChatId={currentChatId}
           />
         ))}

@@ -72,8 +72,6 @@ export const authOptions = {
     }),
   ],
 
-  secret: process.env.NEXTAUTH_SECRET,
-
   callbacks: {
     async session({ session }) {
       const mongoDbUser = await User.findOne({ email: session.user.email });

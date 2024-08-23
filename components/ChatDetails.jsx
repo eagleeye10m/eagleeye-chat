@@ -31,7 +31,6 @@ const ChatDetails = ({ chatId, session }) => {
   };
 
   useEffect(() => {
-    console.log("fuck");
     if (currentUser && chatId) getChatDetails();
   }, [currentUser, chatId]);
 
@@ -87,7 +86,6 @@ const ChatDetails = ({ chatId, session }) => {
   };
 
   useEffect(() => {
-    console.log("fuckin again?");
     pusherClient.subscribe(chatId);
 
     const handleMessage = async (newMessage) => {
