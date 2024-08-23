@@ -8,6 +8,8 @@ import MessageBox from "./MessageBox";
 import { pusherClient } from "@/lib/pusher";
 
 const ChatDetails = ({ chatId, session }) => {
+  console.log(session);
+
   const currentUser = session?.user;
 
   const [loading, setLoading] = useState(true);
