@@ -26,7 +26,7 @@ export const POST = async (req, { params }) => {
 
       await chat.save();
 
-      const updateAllMembers = chat.members.map(async (memberId) => {
+      chat.members.map(async (memberId) => {
         await User.findByIdAndUpdate(
           memberId,
           {
@@ -37,7 +37,7 @@ export const POST = async (req, { params }) => {
           }
         );
       });
-      Promise.all(updateAllMembers); //we can clean the promise.all BTW, it doesnt matter as I've test that out
+      //Promise.all(updateAllMembers); //we can clean the promise.all BTW, it doesnt matter as I've test that out
 
       /*trigger a pusher event for each member to notify a new chat */
       chat.members.map((member) => {

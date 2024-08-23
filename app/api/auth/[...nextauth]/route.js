@@ -4,7 +4,7 @@ import { compare } from "bcryptjs";
 import NextAuth from "next-auth";
 import CredentialsProvider from "next-auth/providers/credentials";
 
-// const handler = NextAuth({
+// export const handler = NextAuth({
 //   providers: [
 //     CredentialsProvider({
 //       name: "Credentials",
@@ -50,7 +50,7 @@ export const authOptions = {
   providers: [
     CredentialsProvider({
       name: "Credentials",
-      async authorize(credentials) {
+      async authorize(credentials, req) {
         // the credentials will be all the info from the login form
         if (!credentials.email || !credentials.password) {
           throw new Error("Invalid email or password");

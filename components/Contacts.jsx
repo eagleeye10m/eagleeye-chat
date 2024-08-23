@@ -6,14 +6,16 @@ import CheckCircle from "@mui/icons-material/CheckCircle";
 import RadioButtonUnchecked from "@mui/icons-material/RadioButtonUnchecked";
 import { CldImage } from "next-cloudinary";
 import { useRouter } from "next/navigation";
+import { useSession } from "next-auth/react";
 
-export default function Contacts({ session }) {
+export default function Contacts() {
   const [loading, setLoading] = useState(true);
   const [contacts, setContacts] = useState([]);
   const [search, setsearch] = useState("");
 
   const router = useRouter();
 
+  const { data: session } = useSession();
   const currentUser = session?.user;
 
   const getContacts = async () => {

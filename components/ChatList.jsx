@@ -11,6 +11,7 @@ export default function ChatList({ session, currentChatId }) {
   const [search, setSearch] = useState("");
 
   const currentUser = session?.user;
+  console.log(session);
 
   const getChats = async () => {
     try {
