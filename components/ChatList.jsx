@@ -13,7 +13,6 @@ export default function ChatList({ currentChatId }) {
 
   const { data: session } = useSession();
   const currentUser = session?.user;
-  console.log(session);
 
   const getChats = async () => {
     try {

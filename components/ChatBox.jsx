@@ -1,6 +1,7 @@
 "use client";
 import { format } from "date-fns";
 import { CldImage } from "next-cloudinary";
+import Link from "next/link";
 import { useRouter } from "next/navigation";
 import React, { useEffect } from "react";
 
@@ -16,14 +17,13 @@ const ChatBox = ({ chat, currentUser, currentChatId }) => {
   const seen = lastMessage.seenBy?.find(
     (member) => member._id === currentUser._id
   );
-  useEffect(() => {}, [seen]);
 
   const router = useRouter();
 
   return (
-    <section
+    <Link
       className={`chat-box ${chat._id === currentChatId ? "bg-blue-2" : ""}`}
-      onClick={() => router.push(`/chats/${chat._id}`)}
+      href={`/chats/${chat._id}`}
     >
       <div className="chat-info">
         {chat?.isGroup ? (
@@ -95,7 +95,7 @@ const ChatBox = ({ chat, currentUser, currentChatId }) => {
           ? format(new Date(chat?.createdAt), "p")
           : format(new Date(chat?.lastMessageAt), "p")}
       </p>
-    </section>
+    </Link>
   );
 };
 
